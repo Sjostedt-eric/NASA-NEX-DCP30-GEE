@@ -1,1 +1,36 @@
+/*To change the Scenario, change the scene variable
+  To change the Date Range, change the range in the NEX variable
+  To change the Variable being exported, change the filter1 attribute filter
+*/
 
+var scene = 'rcp45'
+
+var NEX = ee.ImageCollection('NASA/NEX-DCP30_ENSEMBLE_STATS')
+    .filterMetadata('scenario', 'equals', scene)
+    .filterDate('2006-01-01', '2006-12-31');
+
+var MaxTemp25 = NEX.select('tasmax_quartile25');
+var MaxTemp75 = NEX.select('tasmax_quartile75');
+var MaxTempMean = NEX.select('tasmax_mean');
+var MinTemp25 = NEX.select('tasmin_quartile25');
+var MinTemp75 = NEX.select('tasmin_quartile75');
+var MinTempMean = NEX.select('tasmin_mean');
+var Precip25 = NEX.select('pr_quartile25');
+var Precip75 = NEX.select('pr_quartile75');
+var PrecipMean = NEX.select('pr_mean');
+
+var ROI = ee.Geometry.Rectangle(-124.848974, 24.396308, -66.885444, 49.384358);
+
+for (var i = 1; i < 13; i++){
+  var filter1 = /*Attribute Here*/.filter(ee.Filter.eq('month',i));
+  var filter2 = filter1.reduce(ee.Reducer.mean());
+  Export.image.toDrive({
+  image: filter2,
+  description: '2006_'+i+'_RCP45',
+  folder: 'FutureRechargeDownloads',
+  region: ROI,
+  scale: 800,
+  crs: 'EPSG:4326',
+  maxPixels:1e13,
+  skipEmptyTiles: true,
+});}
