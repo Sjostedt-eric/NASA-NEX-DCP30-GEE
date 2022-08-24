@@ -4,7 +4,7 @@ A repository for working with NASA NEX DCP30 data within google earth engine (GE
 Created in collaboration with Alex Francis, current MS Geology student at the University of Tennessee, Knoxville & Dr. Christopher Russoniello, Assistant Professor leading the Hydrogeology Lab at the University of Rhode Island (https://cjrusson.wixsite.com/mysite).
 
 ## Motivation:
-This repository was created to share produced code on how to extract this multi-terabyte dataset for local research applications using GEE. At the time of production (Summer 2022) there was  methods available to extract this data but mostly based on AWS (https://github.com/awslabs/open-data-docs/tree/main/docs/nasa-nex). We utilized the open-source GEE environment to provide a reproducible, easy access method to accessing this NEX DCP30 dataset. We hope this repository can be of help in your endeavors in downloading/extracting this awesome dataset!
+This repository was created to share produced Java code on how to extract this multi-terabyte dataset for local research applications using GEE. At the time of production (Summer 2022) there was  methods available to extract this data but mostly based on AWS (https://github.com/awslabs/open-data-docs/tree/main/docs/nasa-nex). We utilized the open-source GEE environment to provide a reproducible, easy access method to accessing this NEX DCP30 dataset. We hope this repository can be of help in your endeavors in downloading/extracting this awesome dataset!
 
 ## Dataset Description:
 Description taken from https://developers.google.com/earth-engine/datasets/catalog/NASA_NEX-DCP30#description
