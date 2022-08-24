@@ -3,12 +3,15 @@
   To change the Variable being exported, change the filter1 attribute filter
 */
 
+// defining what RCP scenario to extract
 var scene = 'rcp45'
 
+// defining the dataset, metadata, and time range to extract
 var NEX = ee.ImageCollection('NASA/NEX-DCP30')
     .filterMetadata('scenario', 'equals', scene)
     .filterDate('2006-01-01', '2006-12-31');
 
+// creating variables of mean, lower quartiles, and upper quartiles for each parameter present 
 var MaxTemp25 = NEX.select('tasmax_quartile25');
 var MaxTemp75 = NEX.select('tasmax_quartile75');
 var MaxTempMean = NEX.select('tasmax_mean');
@@ -19,8 +22,10 @@ var Precip25 = NEX.select('pr_quartile25');
 var Precip75 = NEX.select('pr_quartile75');
 var PrecipMean = NEX.select('pr_mean');
 
+// Setting the region of interest as mainland USA
 var ROI = ee.Geometry.Rectangle(-124.848974, 24.396308, -66.885444, 49.384358);
 
+// extraction for loop by each month in a defined year
 for (var i = 1; i < 13; i++){
   var filter1 = /*Attribute Here*/.filter(ee.Filter.eq('month',i));
   var filter2 = filter1.reduce(ee.Reducer.mean());
