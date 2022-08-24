@@ -1,4 +1,5 @@
-/*To change the RCP Scenario frm 4.5 and 8.5, change the scene variable
+/*
+  To change the RCP Scenario frm 4.5 and 8.5, change the scene variable
   To change the Date Range, change the .filterDate range in the NEX variable
   To change the Variable being exported, change the filter1 attribute filter
 */
