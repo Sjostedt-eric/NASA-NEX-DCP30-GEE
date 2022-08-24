@@ -1,5 +1,5 @@
-/*To change the Scenario, change the scene variable
-  To change the Date Range, change the range in the NEX variable
+/*To change the RCP Scenario frm 4.5 and 8.5, change the scene variable
+  To change the Date Range, change the .filterDate range in the NEX variable
   To change the Variable being exported, change the filter1 attribute filter
 */
 
@@ -27,7 +27,7 @@ for (var i = 1; i < 13; i++){
   Export.image.toDrive({
   image: filter2,
   description: '2006_'+i+'_RCP45',
-  folder: 'FutureRechargeDownloads',
+  folder: 'NexDCP30Downloads',
   region: ROI,
   scale: 800,
   crs: 'EPSG:4326',
