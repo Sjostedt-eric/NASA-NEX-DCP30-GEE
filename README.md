@@ -1,5 +1,5 @@
 # NASA-NEX-DCP30-GEE
-A repository for working with NASA NEX DCP30 data within google earth engine.
+A repository for working with NASA NEX DCP30 data within google earth engine (GEE).
 
 Created in collaboration with Alex Francis, current MS Geology student at the University of Tennessee, Knoxville & Dr. Christopher Russoniello, Assistant Professor leading the Hydrogeology Lab at the University of Rhode Island (https://cjrusson.wixsite.com/mysite).
 
