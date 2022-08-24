@@ -13,4 +13,4 @@ The NASA NEX-DCP30 dataset is comprised of downscaled climate scenarios for the 
 
 The dataset contains monthly projections covering the periods from 1950 through 2005 (Retrospective Run) and from 2006 to 2099 (Prospective Run). It includes downscaled projections from 33 models. Not every scenario contains projections from every model.
 
-NEX-DCP30 was prepared by the Climate Analytics Group and NASA Ames Research Center using the NASA Earth Exchange, and distributed by the NASA Center for Climate Simulation (NCCS)
+NEX-DCP30 was prepared by the Climate Analytics Group and NASA Ames Research Center using the NASA Earth Exchange, and distributed by the NASA Center for Climate Simulation (NCCS).
