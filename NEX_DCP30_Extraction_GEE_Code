@@ -5,7 +5,7 @@
 
 var scene = 'rcp45'
 
-var NEX = ee.ImageCollection('NASA/NEX-DCP30_ENSEMBLE_STATS')
+var NEX = ee.ImageCollection('NASA/NEX-DCP30')
     .filterMetadata('scenario', 'equals', scene)
     .filterDate('2006-01-01', '2006-12-31');
 
